@@ -1,7 +1,10 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
-
+// Create methods that execute the necessary MySql commands in the controllers:
+// selectALL()
+// insertOne()
+// updateOne()
 
 
 
