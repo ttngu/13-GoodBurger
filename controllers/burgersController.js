@@ -5,7 +5,15 @@ var router = express.Router();
 // Import burger.js model
 var burger = require("../models/burger.js");
 
-// Create the router
+// Create GET route 
+
+
+
+// Create POST route 
+
+
+
+// Create PUT route 
 
 
 // Export router
