@@ -1,2 +1,2 @@
-INSERT INTO burgers (burger_name) VAR ('OG Good Burger'),
-INSERT INTO burgers (burger_name,devoured) VAR ('Veggie Burger', true),
+INSERT INTO burgers (burger_name, devoured) VALUE ('OG Good Burger', false),
+INSERT INTO burgers (burger_name, devoured) VALUE ('Veggie Burger', true),
