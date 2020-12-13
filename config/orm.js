@@ -18,9 +18,23 @@ function printQuestionMarks(num) {
 function objToSql(ob) {
     var arr = [];
      
-    // For lopp to push the key/value as a string int arr
+    // For loop to push the key/value as a string int arr
+    for (var key in ob) {
+        var value = ob[key];
+
+        if (Object.hasOwnProperty.call(ob, key)) {
+            // add quotaions if the string has spaces
+            if (typeof value === "string" && value.indexOf("") >=0 ) {
+                value = "'" + value + "'";
+            }
+
+            // push the array
+            arr.push(key + "=" + value);
+        }
+    }
 
     // Return array of strings as a single string seperated by commas
+    return arr.toString();
 }
 
 // Create function - Object for all SQL statement functions
