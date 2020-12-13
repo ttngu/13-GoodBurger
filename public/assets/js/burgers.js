@@ -35,13 +35,18 @@ $(function() {
         };
 
         // Send POST request
-        
-
-    })
-    // Page reload, for the updated list
-
-
-})
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurger
+        }).then(
+            function() {
+                console.log("created new burger");
+                // Page reload, for the updated list
+                location.reload();
+            }
+        );
+    });
+});
 
 
     
