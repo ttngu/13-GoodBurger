@@ -14,6 +14,11 @@
 {{!-- Eaten burgers --}}
 <h2>Burgers in the belly!</h2>
 <ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burgers/burger-block devoured=false}}
+        {{/if}}
+    {{/each}}
 
 </ul>
 
