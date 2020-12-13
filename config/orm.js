@@ -37,7 +37,19 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-// Create function - Object for all SQL statement functions
+// Select and Create functions - Object for all SQL statement functions
+var orm = {
+    all: function(tableInput, cb) {
+        var queryString = "SELECT * FROM " + tableInput + ";";
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+    },
+
+}
 
 
 
