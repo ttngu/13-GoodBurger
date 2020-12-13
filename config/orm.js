@@ -13,12 +13,22 @@ function printQuestionMarks(num) {
 
     return arr.toString();
 }
-// selectALL()
-// insertOne()
-// updateOne()
+
+// Helper function to convert obj to key/value pairs in SQL syntax
+function objToSql(ob) {
+    var arr = [];
+     
+    // For lopp to push the key/value as a string int arr
+
+    // Return array of strings as a single string seperated by commas
+}
+
+// Create function - Object for all SQL statement functions
 
 
 
+
+// Update function
 
 
 
