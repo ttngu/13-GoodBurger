@@ -16,9 +16,12 @@ router.get("/", function(req, res) {
     });
 });
 
-
 // Create POST route 
 router.post("/api/burgers", function(req,res) {
+    burger.create( ["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
+        // Send back ID of new burger
+        res.json({ id: result.insertId });
+    });
 
 });
 
