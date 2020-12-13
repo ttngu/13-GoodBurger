@@ -69,6 +69,11 @@ var orm = {
         });
     },
     // Update function
+    update: function(table, objColVals, condition, cb) {
+        var queryString = "UPDATE " + table;
+
+        
+    }
 
 }
 
