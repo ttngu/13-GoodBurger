@@ -1,7 +1,19 @@
 // Wait to attach handlers until DOM is fully loaded
 
 // Create an onclick function to change devoured status
-// Send the PUT request
+$(function() {
+    $(".change-devoured").on("click", function(event) {
+        var id = $(this).data("id");
+        var newDevoured = $(this).data("newdevoured");
+
+        var newDevouredState = {
+            devoured: newDevoured
+        };
+        // Send the PUT request
+
+    })
+})
+
 // Page reload, for the updated list
 
     
