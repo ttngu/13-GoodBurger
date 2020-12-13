@@ -2,7 +2,6 @@
 var orm = require("../config/orm.js");
 
 // Code that will call the ORM functions using specific input for ORM
-// ??? Can I change cb to something else ???
 var burger = {
     all: function(cb) {
         orm.all("burgers", function(res) {
