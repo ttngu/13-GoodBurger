@@ -25,8 +25,19 @@ $(function() {
     });
 
     // Create form on submit
-    // On submit, prevent default
-    // Send POST request
+    $(".create-form").on("submit", function(event) {
+        // On submit, prevent default
+        event.preventDefault();
+
+        var newBurger = {
+            name: $("#bur").val().trim(),
+            devoured: $("[burger_name=devoured]:checked").val().trim()
+        };
+
+        // Send POST request
+        
+
+    })
     // Page reload, for the updated list
 
 
