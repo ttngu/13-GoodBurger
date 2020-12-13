@@ -24,7 +24,7 @@ function objToSql(ob) {
 
         if (Object.hasOwnProperty.call(ob, key)) {
             // add quotaions if the string has spaces
-            if (typeof value === "string" && value.indexOf("") >=0 ) {
+            if (typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
 
