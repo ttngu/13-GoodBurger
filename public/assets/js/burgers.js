@@ -15,17 +15,22 @@ $(function() {
             type: "PUT",
             data: newDevouredState
         }).then(
-            
-        )
+            function() {
+                console.log("changed devoured to", newDevoured);
+
+                // Page reload, for the updated list
+                location.reload();
+            }
+        );
+    });
+
+    // Create form on submit
+    // On submit, prevent default
+    // Send POST request
+    // Page reload, for the updated list
 
 
-    })
 })
 
-// Page reload, for the updated list
 
     
-// Create form on submit
-// On submit, prevent default
-// Send POST request
-// Page reload, for the updated list
