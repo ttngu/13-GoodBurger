@@ -7,9 +7,13 @@ var burger = require("../models/burger.js");
 
 // Create GET route
 router.get("/", function(req, res) {
-    // burger.all(function(data) {
-        
-    // }
+    burger.all(function(data) {
+        var hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+    });
 });
 
 
