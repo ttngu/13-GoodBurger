@@ -2,39 +2,52 @@
 <h1>Welcome to Good Burger, home of the Good Burger</h1>
 
 {{!-- Burgers heading --}}
-<h2>Available burgers</h2>
-<ul>
-    {{#each burgers}} 
-        {{#unless devoured}} 
-            {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
+<div class="container">
+    <div class="row">
+        {{!-- Available burgers --}}
+        <div class="burgerAvail col-md-5">
+            <h2>Available burgers</h2>
+            <ul>
+                {{#each burgers}} 
+                    {{#unless devoured}} 
+                        {{> burgers/burger-block devoured=true}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
-{{!-- Eaten burgers --}}
-<h2>Burgers in the belly!</h2>
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burgers/burger-block devoured=false}}
-        {{/if}}
-    {{/each}}
-</ul>
+        {{!-- Eaten burgers --}}
+        <div class="burgerEaten col-md-5">
+            <h2>Burgers in the belly!</h2>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burger-block devoured=false}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 
 {{!-- Add a burger --}}
-<h2>Add a burger</h2>
-<form class="create-form">
+<div claa="burgerAdd">
+    <h2>Add a burger</h2>
+    <form class="create-form">
 
-    <div class="form-group">
-        <label for="bur">Burger Name:</label>
-        <input type="text" id="bur" name="burger_name">
-    </div>
+        <div class="form-group burgerName">
+            <label for="bur">Burger Name:</label>
+            <input class="inputBox" type="text" id="bur" name="burger_name">
+        </div>
 
-    <div class="form-group">
-        <label for="devour">Devoured?</label><br>
-        <input type="radio" name="devoured" value="1" checked> Devoured! <br>
-        <input type="radio" name="devoured" value="0"> Ready to eat!
-    </div>
+        <div class="form-group">
+            <label for="devour">Devoured?</label><br>
+            <input type="radio" name="devoured" value="1" checked> Devoured! <br>
+            <input type="radio" name="devoured" value="0"> Ready to eat!
+        </div>
 
-    <button type="submit">Add burger</button>
-</form>
+        <button type="submit">Add burger</button>
+    </form>
+</div>
