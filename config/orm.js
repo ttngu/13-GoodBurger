@@ -41,14 +41,11 @@ function objToSql(ob) {
 var orm = {
     
     all: function(tableInput, cb) {
-        console.log(tableInput);
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
             if (err) {
-                console.log("hi");
                 throw err;
             }
-            console.log("hi again");
             cb(result);
         });
     },
