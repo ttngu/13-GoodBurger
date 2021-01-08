@@ -2,21 +2,22 @@
 
 // Create an onclick function to change devoured status
 $(function() {
-    $(".change-devoured").on("click", function(event) {
+    $(".change-eaten").on("click", function(event) {
+        event.preventDefault();
         var id = $(this).data("id");
-        var newDevoured = $(this).data("newdevoured");
+        var newEaten = $(this).data("neweaten");
 
-        var newDevouredState = {
-            devoured: newDevoured
+        var newEatenState = {
+            eaten: newEaten
         };
 
         // Send the PUT request, AJAX 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: newDevouredState
+            data: newEatenState
         }).then(
             function() {
-                console.log("changed devoured to", newDevoured);
+                console.log("changed eaten to", newEaten);
 
                 // Page reload, for the updated list
                 location.reload();
@@ -30,9 +31,10 @@ $(function() {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#bur").val().trim(),
-            devoured: $("[burger_name=devoured]:checked").val().trim()
+            name: $("#burger").val().trim(),
+            eaten: $("[name=eaten]:checked").val().trim()
         };
+        console.log(newBurger);
 
         // Send POST request
         $.ajax("/api/burgers", {

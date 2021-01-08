@@ -1,9 +1,9 @@
 {{!-- Not sure I 100% understand the purpose of this file --}}
 
 <li>
-    {{burger_name}}
+    {{name}}
 
-    <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-        {{#if devoured}}YUMMY in the TUMMY! {{else}}TIME TO EAT{{/if}}
+    <button class="change-eaten" data-id="{{id}}" data-neweaten="{{neweaten}}">
+        {{#if neweaten}}TIME TO EAT!{{else}}YUMMY in the TUMMY!{{/if}}
     </button>
 </li>
