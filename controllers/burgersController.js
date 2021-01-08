@@ -6,7 +6,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create GET route
-router.get("/burgers", function(req, res) {
+router.get("/", function(req, res) {
     console.log("hello");
     burger.all(function(data) {
         var hbsObject = {
