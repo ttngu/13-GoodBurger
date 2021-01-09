@@ -26,7 +26,7 @@ npm i
   <br>
 
   ## Usage
-  ![Alt Text](https://github.com/ttngu/03Homework/blob/master/Assets/screenshot.gif?raw=true)
+  ![Alt Text](./assets/BurgerDemo.gif)
   After lauching the application, the user can input the names of burges they would like to eat. When a burger is inputed, it will display in the Available Burgers if it is ready to eat, or Burgers in the belly if it has already been devoured. The burgers can also be moved to the devoured section once they have been eaten.
   <br>
   <br>
