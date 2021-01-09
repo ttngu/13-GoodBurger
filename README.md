@@ -3,6 +3,9 @@
 
   ## Description
   A restaurant application that lets useder input the names of the burgers they would like to eat. This is a burger logger made with MySQL, Node, Express, Handlebards and a homemade ORM. This addignment follows the MVC design pattern and is deployed using Heroku and JAWS.
+
+  The deployed application can be found here:
+  https://goodburger-app.herokuapp.com/
   <br>
   <br>
 
